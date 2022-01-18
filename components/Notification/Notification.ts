@@ -18,6 +18,5 @@ export default Notification;
 export const Notice =  {
     install: (app: App) => {
         app.config.globalProperties.clNotice = (props: Notification) => renderNotice(props, getContainer())
-    } ,
-    name: 'ClNotice'
+    }
 } 

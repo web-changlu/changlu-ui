@@ -7,6 +7,13 @@
   <h3>123 {{props.text}}</h3>
 </template>
 
+<script lang="ts">
+
+export default {
+   name: 'ClNotice'
+}
+
+</script>
 
 <style scoped>
 
