@@ -1,11 +1,11 @@
 import { App } from '@vue/runtime-core'
-import { useCssModule } from 'vue'
 import  {Button}  from '../components/Button/Button'
 import {Notice} from '../components/Notification/Notification'
-
+import { Selector } from '../components/Selector/index'
 const components = [
     Button,
-    Notice
+    Notice,
+    Selector
 ]
 
 
@@ -31,3 +31,4 @@ export default  {
 //单独暴露组件 方便按需引入,
 export const ClButton = Button;
 export const ClNotice = Notice;
+export const ClSelector = Selector;

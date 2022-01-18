@@ -6,3 +6,8 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+declare type MenuItem  = {
+  id: number,
+  value: number,
+  label: string
+}
