@@ -1,6 +1,8 @@
+
 /* ********************重置样式 reset******************** */
  
 /* *********PC端********** */
+@import './global.scss';
 body, dl, dd, h1, h2, h3, h4, h5, h6, p, form, figure, figcaption {
     margin:0px;
 }

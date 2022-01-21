@@ -1,0 +1,68 @@
+@import './global.scss';
+
+.cl-selector{
+    position: relative;
+    max-width: 600px;
+    .no-data-tip{
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+     }
+    .cl-selector-input{
+        position: relative;
+        width: 100%;
+        label{
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        span{
+            @extend %link;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .input{
+            @extend %full;
+            @extend %box-sizing;
+            padding: 5px 15PX;
+            background-color: $main-background-color;
+            border: $border-width solid $border-color;
+            border-radius: $inline-radius;
+            outline: none;
+            @include transition(all .2s linear);
+    
+            &:focus {
+                border-color: $selected-border-color;
+                box-shadow: 0 0 3px #1890ff;
+            }
+        }
+    }
+    .cl-selector-menu{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 35px;
+        width: 100%;
+        background-color: $main-background-color;
+        box-shadow: 0 0 10px #ddd;
+        cursor: pointer;
+        border-radius: $inline-radius;
+        .cl-selector-menu-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            padding: 5px 0;
+            margin: 3px 0;
+            @include transition(background-color .2s linear);
+            &:hover{
+                background-color: $selected-background-color;
+            }
+        }
+    }
+}
+
+

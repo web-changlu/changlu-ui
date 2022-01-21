@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-
+import '../../../css/ClSelector.scss'
 export default {
    name: 'ClNoDataTip'
 }
@@ -15,9 +15,4 @@ export default {
 
 <style lang="scss" scoped>
 
-.no-data-tip{
-   height: 35px;
-   line-height: 35px;
-   text-align: center;
-}
 </style>

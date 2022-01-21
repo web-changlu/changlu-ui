@@ -29,7 +29,7 @@ const props = defineProps({
             const cLabel = <HTMLElement>el.querySelector('label'),
                 cInput = <HTMLInputElement>el.querySelector('.input'),
                 cSpan = <HTMLSpanElement>el.querySelector('span'),
-                cMenu = <HTMLElement>el.querySelector('.menu');
+                cMenu = <HTMLElement>el.querySelector('.cl-selector-menu');
 
             cInput.addEventListener('focus', ()=>{
                 cLabel.style.display = 'none';
@@ -69,23 +69,20 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="selector" v-focus="'focus'">
+    <div class="cl-selector" v-focus="'focus'">
         <selectorInput :placeholder="placeholder" :text="inputValue"  @searchMenu="setSearchValue" />
         <selectorMenu :menu-data="dataMenu" :searchText="searchValue" @getSelectItem="setSelectItem" />
     </div>
 </template>
 
 <script lang="ts">
-
+import '../../../css/ClSelector.scss'
 export default {
-   name: 'ClSelector'
+   name: 'cl-selector'
 }
 
 </script>
 
 <style lang="scss" scoped>
-.selector{
-    position: relative;
-    max-width: 600px;
-}
+
 </style>

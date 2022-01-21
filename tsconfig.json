@@ -16,5 +16,5 @@
       "@comp": ["components"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "components/lib/*.ts","components/lib/**/*.ts","components/lib/**/*.ts", "components/lib/**/**/**/*.vue", "*.d.ts", "examples/*.ts", "examples/*.vue"]
 }

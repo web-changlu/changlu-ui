@@ -19,14 +19,14 @@ import { getCurrentInstance , ref} from 'vue';
     
     // const _input = instance.refs.searchInput;
     const setValue = (e: FocusEvent, vText: string)=> {
-        if((instance.refs.searchInput as HTMLInputElement).value.length > 0){
-            (instance.refs.searchInput as HTMLInputElement).value = vText
+        if((instance?.refs.searchInput as HTMLInputElement).value.length > 0){
+            (instance?.refs.searchInput as HTMLInputElement).value = vText
         }
     }
 </script>
 
 <template>
-    <div class="selector-input">
+    <div class="cl-selector-input">
         <label >{{placeholder}}</label>
         <input type="text" name="" id="" class="input" :value="text" @input="search"
         @focus="search"
@@ -38,7 +38,7 @@ import { getCurrentInstance , ref} from 'vue';
 </template>
 
 <script lang="ts">
-
+import '../../../css/ClSelector.scss'
 export default {
    name: 'selectorInput'
 }
@@ -46,36 +46,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.selector-input{
-    position: relative;
-    width: 100%;
-    label{
-        position: absolute;
-        left: 5px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    span{
-        @extend %link;
-        position: absolute;
-        right: 5px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .input{
-        @extend %full;
-        @extend %box-sizing;
-        padding: 5px 15PX;
-        background-color: $main-background-color;
-        border: $border-width solid $border-color;
-        border-radius: $inline-radius;
-        outline: none;
-        @include transition(all .2s linear);
 
-        &:focus {
-            border-color: $selected-border-color;
-            box-shadow: 0 0 3px #1890ff;
-        }
-    }
-}
 </style>

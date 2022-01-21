@@ -1,0 +1,7 @@
+@import './global.scss';
+
+.cl-button{
+    @extend %display;
+    border-radius: $inline-radius;
+    border: $border-width solid $border-color;
+}

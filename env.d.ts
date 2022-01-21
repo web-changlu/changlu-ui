@@ -1,8 +1,15 @@
 /// <reference types="vite/client" />
+
 declare type MenuItem  = {
   id: number,
   value: number,
   label: string
+}
+declare type CustomComp = {
+  install: Function 
+}
+declare type WVue =  {
+  Vue: any
 }
 declare module '*.vue' {
   import { DefineComponent } from 'vue'

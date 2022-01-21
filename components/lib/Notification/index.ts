@@ -1,6 +1,6 @@
 import {  h, render } from 'vue';
-import { App } from '@vue/runtime-core'
-import Notification from './Notification.vue';
+import type { App } from 'vue'
+import Notification from './src/main.vue';
 
 const getContainer = () => document.createElement('div');
 export type Notification = {
@@ -13,10 +13,11 @@ const renderNotice = (props : Notification, container: HTMLElement) => {
     return vNode.component
 }
 
-export default Notification;
 
-export const Notice =  {
+const Notice =  {
     install: (app: App) => {
         app.config.globalProperties.clNotice = (props: Notification) => renderNotice(props, getContainer())
     }
 } 
+
+export default Notice;

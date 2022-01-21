@@ -24,7 +24,7 @@ import NoDataTip from './NoDataTip.vue';
         // console.log(item);
         emit('get-select-item', item);
     }
-    const filterData = (data)=> {
+    const filterData = (data: string)=> {
         srearchDataList.length = 0;
         props.menuData.forEach(item => {
             if(item.label.toLowerCase().includes(data.toLowerCase())){
@@ -38,15 +38,15 @@ import NoDataTip from './NoDataTip.vue';
             srearchDataList.push(item)
         })
     })
-    watch(()=>props.searchText, (value:string|number) => {
+    watch(()=>props.searchText, (value:string) => {
         filterData(value)
     })
 </script>
 
 <template>
-    <div class="menu">
+    <div class="cl-selector-menu">
         <template v-if="srearchDataList.length > 0">
-            <div class="menu-item" v-for="item of srearchDataList" :key="item.id" @click="setItemValue(item)">
+            <div class="cl-selector-menu-item" v-for="item of srearchDataList" :key="item.id" @click="setItemValue(item)">
                 {{item.label}}
             </div>
         </template>
@@ -55,7 +55,7 @@ import NoDataTip from './NoDataTip.vue';
 </template>
 
 <script lang="ts">
-
+import '../../../css/ClSelector.scss'
 export default {
    name: 'selectorMenu'
 }
@@ -64,28 +64,5 @@ export default {
 
 <style lang="scss" scoped>
 
-.menu{
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 35px;
-    width: 100%;
-    background-color: $main-background-color;
-    box-shadow: 0 0 10px #ddd;
-    cursor: pointer;
-    border-radius: $inline-radius;
-    .menu-item{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 14px;
-        padding: 5px 0;
-        margin: 3px 0;
-        @include transition(background-color .2s linear);
-        &:hover{
-            background-color: $selected-background-color;
-        }
-    }
-}
 
 </style>
