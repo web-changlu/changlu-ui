@@ -1,0 +1,23 @@
+{
+  "id": "3146155",
+  "name": "changluUI",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4352721",
+      "name": "down",
+      "font_class": "down",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "1058925",
+      "name": "search",
+      "font_class": "iconsearch-copy",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    }
+  ]
+}

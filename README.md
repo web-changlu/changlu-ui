@@ -18,7 +18,7 @@
     Vue.use(CLUI);
 
     // 按需引入
-    import 'changlu-ui/dist/css/demo.css';
+    import 'changlu-ui/dist/theme-default/demo.css';
     import { Demo } from 'changlu-ui';
     Vue.use(Demo);
 

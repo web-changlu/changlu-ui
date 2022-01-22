@@ -55,14 +55,8 @@ import NoDataTip from './NoDataTip.vue';
 </template>
 
 <script lang="ts">
-import '../../../css/ClSelector.scss'
 export default {
    name: 'selectorMenu'
 }
 
 </script>
-
-<style lang="scss" scoped>
-
-
-</style>

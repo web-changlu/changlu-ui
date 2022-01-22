@@ -2,8 +2,14 @@
 /* ********************重置样式 reset******************** */
  
 /* *********PC端********** */
-@import './global.scss';
-body, dl, dd, h1, h2, h3, h4, h5, h6, p, form, figure, figcaption {
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background: #fff;
+  font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif;
+}
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form {
     margin:0px;
 }
 ul, ol {
@@ -11,12 +17,7 @@ ul, ol {
     margin:0px;
     padding:0px;
 }
-body {
-    font:14px/1.5 $pcFont;
-    width:100%;
-    color: $defaultColor;
-    overflow-x:hidden;
-}
+
 h1,h2,h3,h4,h5,h6 {
     font-weight:normal;
 }
@@ -30,16 +31,21 @@ a{
     }
     &:link, 
     &:visited {
-        color: $defaultColor;
+        color: #333;
         text-decoration:none;
     }
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
 }
 a img {
     border:none;
 }
 input, textarea, select {
     outline:none;
-    font:12px/1.5 $pcFont;
 }
  
 /* 清除浮动 */

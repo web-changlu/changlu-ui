@@ -5,16 +5,30 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
+    "declaration": true,
+    "removeComments": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "types": ["vite/client", "node"],
     "lib": ["esnext", "dom"],
     "baseUrl": "./",
     "paths": {
-      "@": ["src"],
-      "@comp": ["components"]
+      "@/*": ["./src/*"],
+      "~/*": ["./components/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "components/lib/*.ts","components/lib/**/*.ts","components/lib/**/*.ts", "components/lib/**/**/**/*.vue", "*.d.ts", "examples/*.ts", "examples/*.vue"]
+  "include": [
+    "src/**/*.ts", 
+    "src/**/*.d.ts", 
+    "src/**/*.tsx", 
+    "src/**/*.vue", 
+    "components/lib/**/*.ts",
+    "components/lib/**/*.vue", 
+    "*.d.ts", 
+    "examples/**/*.ts", 
+    "examples/**/*.vue"
+  ],
+  "exclude": ["node_modules"]
 }

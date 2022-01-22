@@ -1,5 +1,4 @@
-import type { App, Plugin } from 'vue'
-import '../css/reset.scss';
+import type { App } from 'vue'
 import  Button  from './Button'
 import Notice from './Notification'
 import Selector  from './Selector'

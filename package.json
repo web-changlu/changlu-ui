@@ -1,6 +1,6 @@
 {
   "name": "changlu-ui",
-  "version": "1.0.8",
+  "version": "1.0.15",
   "files": [
     "dist",
     "components"
@@ -29,7 +29,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build && gulp sass",
+    "build": "vue-tsc --noEmit && vite build && gulp copyfonts font sass ",
     "build:lib": "vue-tsc --noEmit && vite build --config ./build/lib.config.ts",
     "preview": "vite preview",
     "build:css": "npm gulp sass"

@@ -6,13 +6,8 @@
 </template>
 
 <script lang="ts">
-import '../../../css/ClSelector.scss'
 export default {
    name: 'ClNoDataTip'
 }
 
 </script>
-
-<style lang="scss" scoped>
-
-</style>

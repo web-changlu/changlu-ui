@@ -6,7 +6,9 @@ import App from './App.vue'
 // import Button from '../components/lib/Button/index'
 // import Notice from '../components/lib/Notification/index'
 // import Selector from '../components/lib/Selector/index'
-import CLUI from '../components/lib'
+import CLUI from '~/lib/index'
+import '~/theme-default/index.scss'
+
 createApp(App)
     // .use(Button)
     // .use(Notice)

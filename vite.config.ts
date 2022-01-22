@@ -26,7 +26,7 @@ export default defineConfig({
     // scss预处理 变量定义 重置样式
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "./components/css/global.scss";' 
+        additionalData: '@import "./components/theme-default/global.scss";' 
       }
     }
   },
@@ -52,7 +52,7 @@ export default defineConfig({
   resolve:{
     alias:{
       '@': path.resolve(__dirname, './src'),
-      '@comp': path.resolve(__dirname, './components')
+      '~': path.resolve(__dirname, './components')
     },
   },
   plugins: [

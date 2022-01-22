@@ -76,13 +76,8 @@ const props = defineProps({
 </template>
 
 <script lang="ts">
-import '../../../css/ClSelector.scss'
 export default {
    name: 'cl-selector'
 }
 
 </script>
-
-<style lang="scss" scoped>
-
-</style>

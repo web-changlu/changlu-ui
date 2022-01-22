@@ -38,13 +38,8 @@ import { getCurrentInstance , ref} from 'vue';
 </template>
 
 <script lang="ts">
-import '../../../css/ClSelector.scss'
 export default {
    name: 'selectorInput'
 }
 
 </script>
-
-<style lang="scss" scoped>
-
-</style>
