@@ -32,7 +32,11 @@
     "build": "vue-tsc --noEmit && vite build && gulp copyfonts font sass ",
     "build:lib": "vue-tsc --noEmit && vite build --config ./build/lib.config.ts",
     "preview": "vite preview",
-    "build:css": "npm gulp sass"
+    "build:css": "npm gulp sass",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "register:components": "vitepress-rc"
   },
   "dependencies": {
     "vue": "^3.2.25"
@@ -47,6 +51,9 @@
     "typescript": "^4.4.4",
     "vite": "^2.7.2",
     "vite-plugin-dts": "^0.9.9",
+    "vitepress": "^0.21.6",
+    "vitepress-for-component": "^0.16.6",
+    "vitepress-theme-demoblock": "^1.4.2",
     "vue-tsc": "^0.29.8"
   }
 }
