@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-
+declare type injectDom = Element | Object;
 declare type MenuItem  = {
   id: number,
   value: number,
@@ -17,3 +17,5 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+declare module 'vitepress/dist/client/theme-default';

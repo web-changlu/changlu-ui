@@ -71,12 +71,16 @@ export default defineConfig({
         }
     },
     nav: [{
-        text: '首页',
+        text: 'Home',
         link: '/',
       },
       {
         text: 'GitHub',
         link: 'https://github.com/web-changlu',
+      },
+      {
+        text: 'Npm',
+        link: 'https://www.npmjs.com/package/changlu-ui',
       },
     ],
     // 侧边栏

@@ -28,14 +28,14 @@
             @extend %full;
             @extend %box-sizing;
             padding: 5px 15PX;
-            background-color: $main-background-color;
-            border: $border-width solid $border-color;
-            border-radius: $inline-radius;
+            background-color: $mainBackgroundColor;
+            border: $borderWidth solid $borderColor;
+            border-radius: $inlineRadius;
             outline: none;
             @include transition(all .2s linear);
     
             &:focus {
-                border-color: $selected-border-color;
+                border-color: $selectedBorderColor;
                 box-shadow: 0 0 3px #1890ff;
             }
         }
@@ -46,10 +46,10 @@
         left: 0;
         top: 35px;
         width: 100%;
-        background-color: $main-background-color;
+        background-color: $mainBackgroundColor;
         box-shadow: 0 0 10px #ddd;
         cursor: pointer;
-        border-radius: $inline-radius;
+        border-radius: $inlineRadius;
         .cl-selector-menu-item{
             display: flex;
             justify-content: center;
@@ -59,7 +59,7 @@
             margin: 3px 0;
             @include transition(background-color .2s linear);
             &:hover{
-                background-color: $selected-background-color;
+                background-color: $selectedBackgroundColor;
             }
         }
     }

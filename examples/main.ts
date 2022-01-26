@@ -2,7 +2,6 @@
 
 import { createApp } from 'vue'
 import App from './App.vue'
-
 // import Button from '../components/lib/Button/index'
 // import Notice from '../components/lib/Notification/index'
 // import Selector from '../components/lib/Selector/index'

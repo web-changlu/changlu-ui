@@ -24,11 +24,19 @@
     const setItem = (item: MenuItem)=> {
       console.log(item, 'app')
     }
+
+    const buttonClick = (e: Event)=> {
+      console.log(e, 'button clicked')
+    }
     
 </script>
 
 <template>
-  <cl-selector placeholder="请选择选项" :data-menu="selectorData" @selectedItem="setItem"></cl-selector>
+  <!-- <cl-selector placeholder="请选择选项" :data-menu="selectorData" @selectedItem="setItem"></cl-selector> -->
+  <cl-button @click="buttonClick" :loading="true">默认按钮</cl-button>
+  --------------------------------------------------------
+  <cl-button @click="buttonClick" type="streamer" :disabled="true" :loading="true">流光按钮</cl-button>
+  
 </template>
 
 <style>

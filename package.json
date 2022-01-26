@@ -1,6 +1,6 @@
 {
   "name": "changlu-ui",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "files": [
     "dist",
     "components"
@@ -37,6 +37,7 @@
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "register:components": "vitepress-rc",
+    "ui:npm": "publish",
     "deploy": "git bash deploy.sh"
   },
   "dependencies": {

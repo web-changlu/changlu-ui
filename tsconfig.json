@@ -28,7 +28,8 @@
     "components/lib/**/*.vue", 
     "*.d.ts", 
     "examples/**/*.ts", 
-    "examples/**/*.vue"
+    "examples/**/*.vue",
+    "docs/.vitepress/theme/*.ts"
   ],
   "exclude": ["node_modules"]
 }

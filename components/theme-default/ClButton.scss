@@ -2,6 +2,134 @@
 
 .cl-button{
     @extend %display;
-    border-radius: $inline-radius;
-    border: $border-width solid $border-color;
+    position: relative;
+    // 去掉默认样式
+    outline: none;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    span{
+        margin-left: 5px;
+    }
+    /* 默认按钮 */
+    &--default{
+        background: transparent;
+        border: $borderWidth solid $borderColor;
+        &.is-disabled{
+            border-color: $disabledBorderColor;
+            &::after, &::before{
+                border-color: $disabledBorderColor;
+            }
+        }
+        &::after, &::before{
+            content: '';
+            position: absolute;
+            width: 20%;
+            height: 60%;
+            transition: .3s ease-in-out;
+        }
+        &::before {
+            top: -5px;
+            left: -5px;
+            border-top: 1px solid $borderColor;
+            border-left: 1px solid $borderColor;
+        }
+        &::after {
+            right: -5px;
+            bottom: -5px;
+            border-bottom: 1px solid $borderColor;
+            border-right: 1px solid $borderColor;
+        }
+        
+        &:hover::before,
+        &:hover::after {
+            width: calc(100% + 9px);
+            height: calc(100% + 9px);
+        }
+    }
+    /* 流光按钮 */
+    &--streamer{
+        border-radius: 3px;
+        z-index: 0;
+        border: none;
+        background-color: $primaryColor;
+        color: #fff;
+        &.is-disabled{
+            background-color: $disabledPrimaryColor;
+            &::after,&::before{
+                border-color: $disabledBorderColor;
+            }
+            &:hover{
+                background-color: $disabledPrimaryColor;
+                &::after,&::before{
+                    border-color: $disabledBorderColor;
+                }
+            }
+        }
+        &:hover{
+            background-color: $highlightPrimaryColor;
+            &::after,&::before{
+                animation-play-state: paused;
+            }
+            
+        }
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            z-index: -2;
+            left: -5px;
+            top: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: $blodBorderWidth solid $borderColor;
+            transition: all .5s;
+            animation: clippath 3s infinite linear ;
+            animation-play-state: running;
+        }
+        &::after {
+            animation: clippath 3s infinite -1.5s linear ;
+            animation-play-state: running;
+        }
+    }
+    
+
+    &::-moz-focus-inner{
+        border: 0;
+    }
+}
+
+@keyframes clippath {
+    0%,100% {
+        clip-path: inset(0 0 95% 0);
+    }
+
+    25% {
+        clip-path: inset(0 95% 0 0);
+    }
+    50% {
+        clip-path: inset(95% 0 0 0);
+    }
+    75% {
+        clip-path: inset(0 0 0 95%);
+    }
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+@keyframes iconRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.is-disabled{
+    cursor: not-allowed;
+}
+.is-loading .iconfont::before{
+    display: inline-block;
+    animation: iconRotate 2s linear infinite;
 }

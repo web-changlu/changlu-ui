@@ -67,13 +67,17 @@ $browser: null;
         $browser: ''; @content;
     }
 }
- 
-$border-width: 1px;
-$border-color: #999;
-$selected-border-color: #1890ff;
-$inline-radius: 5px;
-$main-background-color: #fff;
-$selected-background-color: #ccc;
+$primaryColor: #03A9F3;
+$highlightPrimaryColor: #03A9F399;
+$disabledPrimaryColor: #a0cfff;
+$borderWidth: 1px;
+$blodBorderWidth: 2px;
+$borderColor: #03A9F3;
+$disabledBorderColor: #a0cfff;
+$selectedBorderColor: #1890ff;
+$inlineRadius: 5px;
+$mainBackgroundColor: #fff;
+$selectedBackgroundColor: #ccc;
 %full{
     width: 100%;
     height: 100%;
@@ -81,3 +85,4 @@ $selected-background-color: #ccc;
 %link{
     cursor: pointer;
 }
+
