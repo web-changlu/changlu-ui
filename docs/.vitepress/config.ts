@@ -45,6 +45,11 @@ const getDemoSidebar = () =>{
                 children:[]
               },
               {
+                text: "Selector 选择器",
+                link: "/components/selector/",
+                children:[]
+              },
+              {
                 text: "Icon 图标",
                 link: "/components/icon/",
                 children:[]

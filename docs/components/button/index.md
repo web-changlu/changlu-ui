@@ -71,7 +71,7 @@
 
 | 参数 | 说明 | 类型 | 是否必要 | 默认值 |
 |:---:|:---:|:---:|:---:|:---:|
-| type | 按钮类型 | String | false | 'default' |
+| type | 按钮类型 | String | false | default |
 | disabled | 是否禁用状态 | Boolean | false | false |
 | loading | 是否加载状态 | Boolean | false | false |
 | icon | 图标类名 | String | false | - |

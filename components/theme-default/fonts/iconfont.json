@@ -6,6 +6,55 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1277686",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "1433721",
+      "name": "email",
+      "font_class": "email",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "4766901",
+      "name": "cloud-upload",
+      "font_class": "cloud-upload",
+      "unicode": "e7d9",
+      "unicode_decimal": 59353
+    },
+    {
+      "icon_id": "8620033",
+      "name": "edit",
+      "font_class": "edit",
+      "unicode": "e7a5",
+      "unicode_decimal": 59301
+    },
+    {
+      "icon_id": "9866703",
+      "name": "download",
+      "font_class": "download",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "10747027",
+      "name": "setting",
+      "font_class": "setting",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "924435",
+      "name": "loading",
+      "font_class": "loading",
+      "unicode": "e8fd",
+      "unicode_decimal": 59645
+    },
+    {
       "icon_id": "4352721",
       "name": "down",
       "font_class": "down",

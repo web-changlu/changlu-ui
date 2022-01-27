@@ -29,7 +29,7 @@ import { ref, computed } from 'vue'
     const buttonDisabled = computed(()=> {
         return props.disabled || props.loading
     })
-    console.log(buttonDisabled.value, props.loading)
+    // console.log(buttonDisabled.value, props.loading)
 </script>
 
 <template>

@@ -19,10 +19,10 @@ import NoDataTip from './NoDataTip.vue';
          
     }) 
     const srearchDataList: MenuItem[] = reactive<MenuItem[]>([]);
-    const emit = defineEmits(['get-select-item']);
+    const emit = defineEmits(['change']);
     const setItemValue = (item: MenuItem)=> {
         // console.log(item);
-        emit('get-select-item', item);
+        emit('change', item);
     }
     const filterData = (data: string)=> {
         srearchDataList.length = 0;

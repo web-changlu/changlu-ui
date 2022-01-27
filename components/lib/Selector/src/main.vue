@@ -9,7 +9,7 @@ const props = defineProps({
             required: false,
             default: '请选择选项'
         },
-        dataMenu: {
+        dataOption: {
             type: Array as PropType<MenuItem[]>,
             required: true,
             default: () => [
@@ -56,11 +56,11 @@ const props = defineProps({
     }
     let inputValue = ref<string>(''), searchValue =  ref<string>('');
     // let inputValue:string = '', searchValue:string = '';
-    const emit = defineEmits(['selected-item']);
+    const emit = defineEmits(['change']);
     const setSelectItem = (item: MenuItem) =>{
         // console.log(item);
         inputValue.value = item.label;
-        emit('selected-item', item)
+        emit('change', item)
     }
     const setSearchValue = (e: HTMLInputElement)=> {
         searchValue.value = e.value;
@@ -71,7 +71,7 @@ const props = defineProps({
 <template>
     <div class="cl-selector" v-focus="'focus'">
         <selectorInput :placeholder="placeholder" :text="inputValue"  @searchMenu="setSearchValue" />
-        <selectorMenu :menu-data="dataMenu" :searchText="searchValue" @getSelectItem="setSelectItem" />
+        <selectorMenu :menu-data="dataOption" :searchText="searchValue" @change="setSelectItem" />
     </div>
 </template>
 

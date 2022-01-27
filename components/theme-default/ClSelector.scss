@@ -1,5 +1,4 @@
 @import './global.scss';
-@import './fonts/iconfont.css';
 .cl-selector{
     position: relative;
     max-width: 600px;
@@ -29,7 +28,7 @@
             @extend %box-sizing;
             padding: 5px 15PX;
             background-color: $mainBackgroundColor;
-            border: $borderWidth solid $borderColor;
+            border: $borderWidth solid $otherBorderColor;
             border-radius: $inlineRadius;
             outline: none;
             @include transition(all .2s linear);
