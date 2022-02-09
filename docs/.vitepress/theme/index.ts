@@ -12,9 +12,8 @@ import { registerComponents } from './register-components.js'
 
 export default {
   ...Theme,
-  enhanceApp(test :any) {
-    const {app} = test;
+  enhanceApp(vitepress:any) {
     // app.component('clButton', clButton) 
-    registerComponents(app)
+    registerComponents(vitepress.app)
   }
 }

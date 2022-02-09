@@ -5,6 +5,22 @@ declare type MenuItem  = {
   value: number,
   label: string
 }
+
+declare type ClockInfo = {
+  year: number,
+  month: number,
+  day: number,
+  hour: number,
+  minute: number,
+  sec: number
+}
+
+declare type ClockHourObj = {
+  id: string,
+  index: number,
+  value: string
+}
+
 declare type CustomComp = {
   install: Function 
 }

@@ -2,10 +2,12 @@ import type { App } from 'vue'
 import  Button  from './Button'
 import Notice from './Notification'
 import Selector  from './Selector'
+import Clock from './Clock'
 const componentsList :any[] = [
     Button,
     Notice,
-    Selector
+    Selector,
+    Clock
 ]
 
 
@@ -36,3 +38,4 @@ export default  ChangLuUI
 export const ClButton = Button;
 export const ClNotice = Notice;
 export const ClSelector = Selector;
+export const ClClock = Clock;

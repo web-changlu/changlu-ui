@@ -32,7 +32,8 @@
 </script>
 
 <template>
-  <cl-selector placeholder="请选择选项" :data-option="selectorData" @change="setItem"></cl-selector>
+  <cl-clock></cl-clock>
+  <!-- <cl-selector placeholder="请选择选项" :data-option="selectorData" @change="setItem"></cl-selector> -->
   <!-- <cl-button @click="buttonClick" :loading="true">默认按钮</cl-button>
   --------------------------------------------------------
   <cl-button @click="buttonClick" type="streamer" :disabled="true" :loading="true">流光按钮</cl-button> -->

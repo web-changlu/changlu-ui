@@ -50,6 +50,11 @@ const getDemoSidebar = () =>{
                 children:[]
               },
               {
+                text: "Clock 时钟",
+                link: "/components/clock/",
+                children:[]
+              },
+              {
                 text: "Icon 图标",
                 link: "/components/icon/",
                 children:[]
