@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as a,e as t}from"./app.37707654.js";const m='{"title":"\u5F15\u5165\u7EC4\u4EF6\u5E93","description":"","frontmatter":{},"headers":[],"relativePath":"components/install/quick.md","lastUpdated":1644216070468}',p={},e=t("",3),o=[e];function c(u,i,l,r,k,d){return a(),s("div",null,o)}var h=n(p,[["render",c]]);export{m as __pageData,h as default};
