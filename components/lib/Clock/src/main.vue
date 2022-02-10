@@ -6,6 +6,10 @@ const props = defineProps({
     required: false,
     default: () => new Date(),
   },
+  clockWidth:{
+    type: Number,
+    required: false,
+  }
 });
 
 const dateInfo: ClockInfo = {
@@ -170,7 +174,17 @@ function changeZHCN(value: number) {
     ZHCNArr[parseInt(val.charAt(1), 10)];
   return str;
 }
-
+const clockWidthStr = computed(()=> {
+  if(props.clockWidth){
+    if(props.clockWidth < 680){
+      return '680px'
+    }else{
+      return `${props.clockWidth}px`
+    }
+  }else{
+    return '100%';
+  }
+})
 const yearStr = computed(() => {
   let y = dateInfo.year.toString(),
     str = "";
@@ -300,10 +314,8 @@ function dayAdd() {
 </script>
 
 <template>
-  <ul class="cl-clock" ref="$clock">
+  <ul class="cl-clock" ref="$clock" :style="{width:clockWidthStr, height: clockWidthStr}">
     <hr />
-    <span class="test"></span>
-    <div class="shu"></div>
     <li class="cl-clock-bg"></li>
     <li class="cl-clock-date">{{ yearStr }}年{{ monthStr }}月{{ dayStr }}日</li>
   </ul>

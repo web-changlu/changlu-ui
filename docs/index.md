@@ -2,7 +2,7 @@
 home: true
 heroAlt: Logo image
 heroText: Welcome to ChangLu-UI!
-tagline: 一款有趣的组件库
+tagline: 一款有趣的vue3组件库
 actionText: Get Started
 actionLink: /components/introduce/
 features:
