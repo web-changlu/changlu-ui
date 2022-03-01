@@ -1,4 +1,0 @@
-import{_ as t,c as a,o as n,b as e,d as o}from"./app.0ac3c014.js";const x='{"title":"\u65B0\u7279\u6027","description":"","frontmatter":{},"headers":[],"relativePath":"components/log/new.md","lastUpdated":1644391639438}',s={},r=e("h1",{id:"\u65B0\u7279\u6027",tabindex:"-1"},[o("\u65B0\u7279\u6027 "),e("a",{class:"header-anchor",href:"#\u65B0\u7279\u6027","aria-hidden":"true"},"#")],-1),c=e("pre",null,[e("code",null,`1. \u65B0\u589Ebutton\u7EC4\u4EF6\uFF0C \u5206\u666E\u901A\u6309\u94AE\u548C\u6D41\u5149\u6309\u94AE\u3002
-2. \u65B0\u589E\u4E0B\u62C9\u6846\u7EC4\u4EF6\uFF0C \u652F\u6301\u641C\u7D22\uFF0C \u6587\u6863\u6B63\u5728\u7F16\u5199\u4E2D\u3002
-3. \u65B0\u589E\u65F6\u949F\u7EC4\u4EF6\u3002
-`)],-1),d=[r,c];function _(i,l,p,h,u,f){return n(),a("div",null,d)}var $=t(s,[["render",_]]);export{x as __pageData,$ as default};
