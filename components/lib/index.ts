@@ -3,11 +3,15 @@ import  Button  from './Button'
 import Notice from './Notification'
 import Selector  from './Selector'
 import Clock from './Clock'
+import Nebula from './Nebula'
+import NavigationBar from './NavigationBar'
 const componentsList :any[] = [
     Button,
     Notice,
     Selector,
-    Clock
+    Clock,
+    Nebula,
+    NavigationBar
 ]
 
 
@@ -39,3 +43,5 @@ export const ClButton = Button;
 export const ClNotice = Notice;
 export const ClSelector = Selector;
 export const ClClock = Clock;
+export const ClNebula = Nebula;
+export const ClNavigationBar = NavigationBar;

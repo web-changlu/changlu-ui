@@ -4,12 +4,18 @@
 
 ```bash
 
-npm install changlu-ui -D
+npm install changlu-ui -S
 
 ```
 
 ### 2.通过cdn方式引入
 
->cdn暂未部署...
+>此法暂未测试，不确定是否可用...
 
-### 3.其他
+```html
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/changlu-ui@1.0.18/dist/theme-default/index.css">
+<!-- 引入组件库 -->
+<script src="https://cdn.jsdelivr.net/npm/changlu-ui@1.0.18/dist/changlu-ui.umd.min.js"></script>
+
+```

@@ -13,17 +13,17 @@
 <script setup lang="ts">
     const selectorData = [
         { 
-            id: 1,
+            id: 'select1',
             value: 1,
             label: '选项一'
         },
         { 
-            id: 2,
+            id: 'select2',
             value: 2,
             label: '选项二'
         },
         { 
-            id: 3,
+            id: 'select3',
             value: 3,
             label: '选项三'
         },
@@ -40,18 +40,22 @@
 ### Attributes  
 
 
-| 参数 | 说明 | 类型 | 是否必要 | 默认值 |
-|:---:|:---:|:---:|:---:|:---:|
-| placeholder | 未选择时的占位文本 | String | false | 请选择选项 |
-| dataOption | 选择列表 | Array | true | [ ] |
+|    参数     |        说明        |    类型    | 是否必要 |   默认值   |
+| :---------: | :----------------: | :--------: | :------: | :--------: |
+| placeholder | 未选择时的占位文本 |   String   |  false   | 请选择选项 |
+| dataOption  |      选择列表      | []MenuItem |   true   |    [ {     |
+    id: 'menu1',
+                    value: 1,
+                    label: '选项一' 
+} ] |
 
 
 ### Events  
 
 
-| 事件名称 | 说明 | 回调参数 |
-|:---:|:---:|:---:|
-| change | 用户选中时触发 | 目前选中的值 | 
+| 事件名称 |      说明      |   回调参数   |
+| :------: | :------------: | :----------: |
+|  change  | 用户选中时触发 | 目前选中的值 |
 
 <style lang='sass'>
 .source .cl-selector

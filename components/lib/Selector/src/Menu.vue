@@ -10,7 +10,7 @@ import NoDataTip from './NoDataTip.vue';
             type: Array as PropType<MenuItem[]>,
             default: () => [
                 { 
-                    id: 1,
+                    id: 'menu1',
                     value: 1,
                     label: '选项一' 
                 }

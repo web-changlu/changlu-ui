@@ -4,23 +4,61 @@
 import { getCurrentInstance } from "vue";
 const THIS = getCurrentInstance()!.appContext.config.globalProperties;
 // THIS.clNotice({text: '通知组件测试'});
-const selectorData = [
+const selectorData : MenuItem[] = [
   {
-    id: 1,
+    id: 'select1',
     value: 1,
     label: "选项一",
   },
   {
-    id: 2,
+    id: 'select2',
     value: 2,
     label: "选项二",
   },
   {
-    id: 3,
+    id: 'select3',
     value: 3,
     label: "选项三",
   },
 ];
+
+const navList: NavItem[] = [
+  {
+    id: 'nav01',
+    icon: 'icon-home',
+    text: 'Home',
+    href: '#',
+    isCurrent: true
+  },
+  {
+    id: 'nav02',
+    icon: 'icon-User',
+    text: 'Profile',
+    href: '#',
+    isCurrent: false
+  },
+  {
+    id: 'nav03',
+    icon: 'icon-message',
+    text: 'Message',
+    href: '#',
+    isCurrent: false
+  },
+  {
+    id: 'nav04',
+    icon: 'icon-Camera',
+    text: 'Photos',
+    href: '#',
+    isCurrent: false
+  },
+  {
+    id: 'nav05',
+    icon: 'icon-setting',
+    text: 'Settings',
+    href: '#',
+    isCurrent: false
+  },
+]
 const setItem = (item: MenuItem) => {
   console.log(item, "app");
 };
@@ -28,12 +66,14 @@ const setItem = (item: MenuItem) => {
 const buttonClick = (e: Event) => {
   console.log(e, "button clicked");
 };
-const clockWidth: number = 720;
+const compkWidth: number = 400;
 </script>
 
 <template>
   <div class="container">
-    <cl-clock :clock-width="clockWidth"></cl-clock>
+    <!-- <cl-clock :clock-width="compkWidth"></cl-clock> -->
+    <!-- <cl-nebula ></cl-nebula> -->
+    <cl-navigationBar type="mobile" :navData="navList"></cl-navigationBar>
   </div>
 
   <!-- <cl-selector placeholder="请选择选项" :data-option="selectorData" @change="setItem"></cl-selector> -->
@@ -47,11 +87,14 @@ const clockWidth: number = 720;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   display: flex;
   height: 100vh;
+  width: 100vw;
   align-items: center;
   justify-content: center;
 }
 .container{
-  height: 100vh;
+  position: relative;
+  height: 100%;
+  width: 100%;
   background-color: cadetblue;
 }
 </style>

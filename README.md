@@ -1,6 +1,8 @@
 # changlu-ui 组件库
 
-### 快速开始[戳我看文档](https://web-changlu.github.io/changlu-ui/)
+### 快速开始
+1.组件库文档地址: ui.changlu.xyz[戳我看文档](ui.changlu.xyz)
+
 
 #### 1.安装组件库
 

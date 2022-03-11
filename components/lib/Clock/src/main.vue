@@ -176,11 +176,7 @@ function changeZHCN(value: number) {
 }
 const clockWidthStr = computed(()=> {
   if(props.clockWidth){
-    if(props.clockWidth < 680){
-      return '680px'
-    }else{
       return `${props.clockWidth}px`
-    }
   }else{
     return '100%';
   }

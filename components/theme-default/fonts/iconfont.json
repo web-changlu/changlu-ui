@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "33520",
+      "name": "message",
+      "font_class": "message",
+      "unicode": "e6bc",
+      "unicode_decimal": 59068
+    },
+    {
+      "icon_id": "12004325",
+      "name": "User",
+      "font_class": "User",
+      "unicode": "ea94",
+      "unicode_decimal": 60052
+    },
+    {
+      "icon_id": "12004338",
+      "name": "Camera",
+      "font_class": "Camera",
+      "unicode": "ea95",
+      "unicode_decimal": 60053
+    },
+    {
+      "icon_id": "19603128",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e681",
+      "unicode_decimal": 59009
+    },
+    {
       "icon_id": "1277686",
       "name": "分享",
       "font_class": "fenxiang",

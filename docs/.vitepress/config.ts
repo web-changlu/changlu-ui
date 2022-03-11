@@ -68,9 +68,15 @@ const getDemoSidebar = () =>{
     ]
 }
 export default defineConfig({
-  base: '/changlu-ui/',
+  base: '/',
   title: 'ChangLu-UI',
   description: '一款v3组件库',
+  head:[[
+    'link', {
+      rel:'icon',
+      href:'/img/favicon.ico'
+    }
+  ]],
   themeConfig: {
     //   展示搜索框
     algolia: {
