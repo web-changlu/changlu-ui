@@ -39,7 +39,13 @@ const getDemoSidebar = () =>{
         
         {
             text: "基础组件",
-            children: [{
+            children: [
+              {
+                text: "NavigationBar 导航栏",
+                link: "/components/navigationbar/",
+                children:[]
+              },
+              {
                 text: "Button 按钮",
                 link: "/components/button/",
                 children:[]

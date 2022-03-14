@@ -1,7 +1,7 @@
 # Selector 选择器  
 >鱼与熊掌不可得兼，舍鱼而取熊掌者也。
 
-## 基础用法  
+## 基础用法&代码示例
 >单选 并且支持搜索
 
 :::demo 使用`option`来传入选择列表
@@ -43,12 +43,24 @@
 |    参数     |        说明        |    类型    | 是否必要 |   默认值   |
 | :---------: | :----------------: | :--------: | :------: | :--------: |
 | placeholder | 未选择时的占位文本 |   String   |  false   | 请选择选项 |
-| dataOption  |      选择列表      | []MenuItem |   true   |    [ {     |
-    id: 'menu1',
-                    value: 1,
-                    label: '选项一' 
-} ] |
+| dataOption  |      选择列表      | []MenuItem |   true   |    [ {   id: 'menu1',      value: 1,   label: '选项一' } ] |
 
+
+
+::: tip 类型说明: MenuItem
+```typescript
+declare type MenuItem = {
+    //菜单项的id
+  id: string,
+    //   菜单项的值
+  value: number,
+    //   菜单项显示的值
+  label: string
+}
+```
+:::
+
+---
 
 ### Events  
 

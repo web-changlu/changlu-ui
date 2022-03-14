@@ -70,6 +70,7 @@ const compkWidth: number = 400;
 </script>
 
 <template>
+<div class="body-container"></div>
   <div class="container">
     <!-- <cl-clock :clock-width="compkWidth"></cl-clock> -->
     <!-- <cl-nebula ></cl-nebula> -->
@@ -91,10 +92,15 @@ const compkWidth: number = 400;
   align-items: center;
   justify-content: center;
 }
-.container{
+.body-container{
   position: relative;
   height: 100%;
   width: 100%;
   background-color: cadetblue;
+}
+.container{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 </style>

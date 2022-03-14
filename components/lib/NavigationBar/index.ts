@@ -1,4 +1,4 @@
-import type { App, Plugin } from 'vue'
+import type { App } from 'vue'
 import NavigationBar from './src/main.vue'
 
 NavigationBar.install = (app: App) => {

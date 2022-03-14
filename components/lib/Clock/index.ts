@@ -1,4 +1,4 @@
-import type { App, Plugin } from 'vue'
+import type { App } from 'vue'
 import Clock from './src/main.vue'
 
 Clock.install = (app: App) => {

@@ -1,4 +1,4 @@
-import type { App, Plugin } from 'vue'
+import type { App } from 'vue'
 import Nebula from './src/main.vue'
 
 Nebula.install = (app: App) => {

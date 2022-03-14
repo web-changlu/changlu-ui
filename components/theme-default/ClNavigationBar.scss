@@ -1,6 +1,15 @@
+@import './global.scss';
 .cl-navigationBar-container{
-    position: absolute;
-    bottom: 0;
+    // position: absolute;
+    // bottom: 0;
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    div{
+        box-sizing: content-box;
+    }
     width: 100%;
     height: 70px;
     background-color: #fafafa;
@@ -15,6 +24,7 @@
         .indicator{
             position: absolute;
             top: -50%;
+            left: -20%;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -27,23 +37,23 @@
                 position: absolute;
                 content: '';
                 top: 58%;
-                left: -40%;
-                width: 20px;
-                height: 20px;
+                left: -35%;
+                width: 16px;
+                height: 16px;
                 background-color: transparent;
-                border-top-right-radius: 20px;
-                box-shadow: 0 -10px  0 0 cadetblue;
+                border-top-right-radius: 16px;
+                box-shadow: 0 -8px  0 0 cadetblue;
             }
             &::after{
                 position: absolute;
                 content: '';
                 top: 58%;
-                right: -40%;
-                width: 20px;
-                height: 20px;
+                right: -35%;
+                width: 16px;
+                height: 16px;
                 background-color: transparent;
-                border-top-left-radius: 20px;
-                box-shadow: 0 -10px  0 0 cadetblue;
+                border-top-left-radius: 16px;
+                box-shadow: 0 -8px  0 0 cadetblue;
             }
         }
         li{
@@ -79,13 +89,17 @@
             }
             &.active{
                 .iconfont{
-                    transform: translateY(-200%);
+                    transform: translateY(-40px);
                 }
                 .mobilenav-text{
                     opacity: 1;
                     transform: translateY(-5px);
                 }
             } 
+            // &:nth-child(1).active ~ .indicator{
+            //     // transform: translateX(calc);
+            //     left: calc(100%);
+            // }
         }
     }
 }
