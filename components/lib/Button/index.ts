@@ -1,7 +1,6 @@
 import type { App, Plugin } from 'vue'
 import Button from './src/main.vue'
 
-
 // export const ButtonPlugin:Plugin = {
 //     install(app: App) {
 //             app.component(Button.name, Button)
@@ -12,9 +11,9 @@ import Button from './src/main.vue'
 // }
 // type SFCWithInstall<T> = T &  {install(app: App): void};
 
-Button.install = (app: App) => {
+Button.install = (app: App):void => {
     app.component(Button.name, Button)
 };
-// const CLButton: SFCWithInstall<typeof Button> = Button;
+
 
 export default Button

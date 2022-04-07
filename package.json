@@ -3,10 +3,13 @@
   "version": "1.0.19",
   "files": [
     "dist",
-    "components"
+    "components",
+    "theme-default"
   ],
-  "main": "dist/index.umd.js",
-  "module": "dist/index.es.js",
+  "typings": "./env.d.ts",
+  "main": "./dist/changlu-ui.umd.js",
+  "style": "./dist/theme-default/index.css",
+  "module": "./dist/changlu-ui.es.js",
   "description": "一款vue3.0组件库",
   "keywords": [
     "changlu-ui",
@@ -24,15 +27,16 @@
     ".": {
       "require": "./dist/changlu-ui.umd.js",
       "import": "./dist/changlu-ui.es.js"
-    }
+    },
+    "./theme-default/": "./dist/theme-default/"
   },
   "license": "MIT",
+  "repository": "https://github.com/web-changlu/changlu-ui.git",
+  "homepage": "http://ui.changlu.xyz/",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build && gulp copyfonts font sass ",
-    "build:lib": "vue-tsc --noEmit && vite build --config ./build/lib.config.ts",
+    "build": "vue-tsc --noEmit && vite build && gulp clean copyfonts font sass ",
     "preview": "vite preview",
-    "build:css": "npm gulp sass",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
@@ -46,8 +50,9 @@
   "devDependencies": {
     "@types/node": "^17.0.9",
     "@vitejs/plugin-vue": "^2.0.0",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
-    "gulp-minify-css": "^1.2.4",
+    "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.48.0",
     "typescript": "^4.4.4",

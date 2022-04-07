@@ -45,10 +45,10 @@ import { ref, computed } from 'vue'
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue'
 
-
-export default {
+export default defineComponent ({
    name: 'cl-button'
-}
+})
 
 </script>

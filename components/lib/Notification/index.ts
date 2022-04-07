@@ -1,7 +1,6 @@
 import {  h, render } from 'vue';
 import type { App } from 'vue'
 import Notification from './src/main.vue';
-
 const getContainer = () => document.createElement('div');
 export type Notification = {
     text: string
@@ -19,5 +18,4 @@ const Notice =  {
         app.config.globalProperties.clNotice = (props: Notification) => renderNotice(props, getContainer())
     }
 } 
-
 export default Notice;

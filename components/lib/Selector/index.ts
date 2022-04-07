@@ -1,6 +1,5 @@
 import type { App, Plugin } from 'vue'
 import Selector from './src/main.vue'
-
 // export const SelectorPlugin: Plugin = {
 //     install(app: App) {
 //             app.component(Selector.name, Selector)
@@ -14,5 +13,4 @@ import Selector from './src/main.vue'
 Selector.install = (app: App) => {
     app.component(Selector.name, Selector)
 }
-
 export default Selector

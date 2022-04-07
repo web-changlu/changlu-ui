@@ -52,7 +52,8 @@ const handleClick = (item: NavItem) => {
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
   name: "cl-navigationBar",
-};
+});
 </script>
