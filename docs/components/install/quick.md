@@ -5,12 +5,12 @@
 ```javascript
 
     //全部引入
-    import 'changlu-ui/dist/theme-default/index.css';
+    import 'changlu-ui/theme-default/index.css';
     import CLUI from 'changlu-ui';
     Vue.use(CLUI);
 
     // 按需引入
-    import 'changlu-ui/dist/theme-default/demo.css';
+    import 'changlu-ui/theme-default/demo.css';
     import { Demo } from 'changlu-ui';
     Vue.use(Demo);
 
