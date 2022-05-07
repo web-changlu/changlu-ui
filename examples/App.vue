@@ -4,7 +4,7 @@
 import { getCurrentInstance } from "vue";
 const THIS = getCurrentInstance()!.appContext.config.globalProperties;
 // THIS.clNotice({text: '通知组件测试'});
-const selectorData : MenuItem[] = [
+const selectorData : MENUITEM[] = [
   {
     id: 'select1',
     value: 1,
@@ -22,7 +22,7 @@ const selectorData : MenuItem[] = [
   },
 ];
 
-const navList: NavItem[] = [
+const navList: NAVITEM[] = [
   {
     id: 'nav01',
     icon: 'icon-home',
@@ -59,7 +59,7 @@ const navList: NavItem[] = [
     isCurrent: false
   },
 ]
-const setItem = (item: MenuItem) => {
+const setItem = (item: MENUITEM) => {
   console.log(item, "app");
 };
 
@@ -67,6 +67,7 @@ const buttonClick = (e: Event) => {
   console.log(e, "button clicked");
 };
 const compkWidth: number = 400;
+const wordList = <string[]>['Grid','Helix','Chaotic','Sphere','Three','Geome','Curve','Random'];
 </script>
 
 <template>
@@ -74,7 +75,8 @@ const compkWidth: number = 400;
   <div class="container">
     <!-- <cl-clock :clock-width="compkWidth"></cl-clock> -->
     <!-- <cl-nebula ></cl-nebula> -->
-    <cl-navigationBar type="mobile" :navData="navList"></cl-navigationBar>
+    <!-- <cl-navigationBar type="mobile" :navData="navList"></cl-navigationBar> -->
+    <cl-wordCloud :width="500" :wordData="wordList"></cl-wordCloud>
   </div>
 
   <!-- <cl-selector placeholder="请选择选项" :data-option="selectorData" @change="setItem"></cl-selector> -->

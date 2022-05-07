@@ -7,7 +7,7 @@ let mouseX = ref(0),
   mouseY = ref(0),
   cxt: CanvasRenderingContext2D | null = null;
 // console.log(typeof $nebula.value)；
-const particleList: Particle[] = reactive<Particle[]>([]);
+const particleList: PARTICLE[] = reactive<PARTICLE[]>([]);
 const init = (canvas: HTMLCanvasElement | null) => {
   $nebula.value?.addEventListener("mousemove", getMouseMovePosition);
   if ($nebula.value) {
@@ -38,14 +38,14 @@ const creatMatchstickMen = () => {};
  *  @param mouseY 鼠标位置
  */
 const createParticles = (
-  particles: Particle[],
+  particles: PARTICLE[],
   mouseX: number,
   mouseY: number
 ) => {
   let radius: number = 150; // 围成的圆的半径
   for (let i = 0; i < 150; i++) {
     // 循环给每一个粒子 添加属性
-    let particle: Particle = {
+    let particle: PARTICLE = {
       size: 1, // 线宽
       position: { x: mouseX, y: mouseY }, // 粒子的位置
       offset: { x: 0, y: 0 }, //围绕中心旋转的偏移量

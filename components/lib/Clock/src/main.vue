@@ -12,7 +12,7 @@ const props = defineProps({
   }
 });
 
-const dateInfo: ClockInfo = {
+const dateInfo: CLOCKINFO = {
   year: props.time.getFullYear(),
   month: props.time.getMonth() + 1,
   day: props.time.getDate(),
@@ -23,7 +23,7 @@ const dateInfo: ClockInfo = {
 const hourRotateArr: Array<number> = [],
   minuteRotateArr: Array<number> = [],
   secRotateArr: Array<number> = [],
-  hourStrArr: Array<ClockHourObj> = [];
+  hourStrArr: Array<CLOCKHOUROBJ> = [];
 for (let i = 1; i <= 24; i++) {
   // rotateArr.push(360/24*(i-1)*-1);
   hourStrArr.push({

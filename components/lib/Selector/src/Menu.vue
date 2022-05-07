@@ -7,7 +7,7 @@ import NoDataTip from './NoDataTip.vue';
             default: ''
         },
         menuData: {
-            type: Array as PropType<MenuItem[]>,
+            type: Array as PropType<MENUITEM[]>,
             default: () => [
                 { 
                     id: 'menu1',
@@ -18,9 +18,9 @@ import NoDataTip from './NoDataTip.vue';
         }
          
     }) 
-    const srearchDataList: MenuItem[] = reactive<MenuItem[]>([]);
+    const srearchDataList: MENUITEM[] = reactive<MENUITEM[]>([]);
     const emit = defineEmits(['change']);
-    const setItemValue = (item: MenuItem)=> {
+    const setItemValue = (item: MENUITEM)=> {
         // console.log(item);
         emit('change', item);
     }
@@ -55,8 +55,9 @@ import NoDataTip from './NoDataTip.vue';
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
    name: 'selectorMenu'
-}
+});
 
 </script>

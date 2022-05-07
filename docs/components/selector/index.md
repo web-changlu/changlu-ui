@@ -28,7 +28,7 @@
             label: '选项三'
         },
     ]
-    const setItem = (item: MenuItem)=> {
+    const setItem = (item: MENUITEM)=> {
       console.log(item, '选中的选项')
     }
 </script>
@@ -43,13 +43,13 @@
 |    参数     |        说明        |    类型    | 是否必要 |   默认值   |
 | :---------: | :----------------: | :--------: | :------: | :--------: |
 | placeholder | 未选择时的占位文本 |   String   |  false   | 请选择选项 |
-| dataOption  |      选择列表      | []MenuItem |   true   |    [ {   id: 'menu1',      value: 1,   label: '选项一' } ] |
+| dataOption  |      选择列表      | []MENUITEM |   true   |    [ {   id: 'menu1',      value: 1,   label: '选项一' } ] |
 
 
 
-::: tip 类型说明: MenuItem
+::: tip 类型说明: MENUITEM
 ```typescript
-declare type MenuItem = {
+declare type MENUITEM = {
     //菜单项的id
   id: string,
     //   菜单项的值

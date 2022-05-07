@@ -10,7 +10,7 @@ const props = defineProps({
             default: '请选择选项'
         },
         dataOption: {
-            type: Array as PropType<MenuItem[]>,
+            type: Array as PropType<MENUITEM[]>,
             required: true,
             default: () => [
                 { 
@@ -57,7 +57,7 @@ const props = defineProps({
     let inputValue = ref<string>(''), searchValue =  ref<string>('');
     // let inputValue:string = '', searchValue:string = '';
     const emit = defineEmits(['change']);
-    const setSelectItem = (item: MenuItem) =>{
+    const setSelectItem = (item: MENUITEM) =>{
         // console.log(item);
         inputValue.value = item.label;
         emit('change', item)

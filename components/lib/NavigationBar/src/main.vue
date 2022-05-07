@@ -15,7 +15,7 @@ const props = defineProps({
     default: "mobile",
   },
   navData: {
-    type: Array as PropType<NavItem[]>,
+    type: Array as PropType<NAVITEM[]>,
     default: () => [
       {
         id: "nav1",
@@ -29,13 +29,13 @@ const props = defineProps({
 });
 
 const currentComponent = computed(() => {
-  const componentMap: ComponentMap = {
+  const componentMap: COMPONENTMAP = {
     mobile: defineAsyncComponent(() => import("./mobileNav.vue")),
   };
   return componentMap[props.type] || null;
 });
 const emit = defineEmits(["navItemClick"]);
-const handleClick = (item: NavItem) => {
+const handleClick = (item: NAVITEM) => {
   // console.log(item)
   emit("navItemClick", item);
 };

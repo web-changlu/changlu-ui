@@ -4,10 +4,17 @@ import type { App } from 'vue'
 import  ClButton  from './Button'
 import ClNotice from './Notification'
 import ClSelector  from './Selector'
+
+
+import ClNavigationBar from './NavigationBar'
+
+/* 基础组件 end */
+
+/* 创意组件 start  */
 import ClClock from './Clock'
 import ClNebula from './Nebula'
-import ClNavigationBar from './NavigationBar'
-/* 基础组件 end */
+import ClWordCloud from './WordCloud'
+/* 创意组件 end  */
 
 /* 所有组件 */
 const componentsList :any[] = [
@@ -16,7 +23,8 @@ const componentsList :any[] = [
     ClSelector,
     ClClock,
     ClNebula,
-    ClNavigationBar
+    ClNavigationBar,
+    ClWordCloud
 ]
 
 /**
@@ -35,10 +43,10 @@ const install =(app: App) => {
     })
 }
 
-const hasVue = (value:any):value is WVue => (value as WVue)['Vue'] !== undefined;
+const hasVue = (value:any):value is WVUE => (value as WVUE)['Vue'] !== undefined;
 
 // cdn方式引入 当检测到Vue为全局变量时自动注册组件
-if(typeof window !== undefined && hasVue(window)){
+if(typeof global == undefined  && typeof window !== undefined && hasVue(window)){
     install(window.Vue)
 }
 
@@ -48,7 +56,8 @@ export {
     ClSelector,
     ClClock,
     ClNebula,
-    ClNavigationBar
+    ClNavigationBar,
+    ClWordCloud
 }
 
 // 全部导出

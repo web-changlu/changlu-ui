@@ -11,7 +11,7 @@ import {
 import { setClickState } from "../../common";
 const props = defineProps({
   data: {
-    type: Array as PropType<NavItem[]>,
+    type: Array as PropType<NAVITEM[]>,
     default: () => [
       {
         id: "nav1",
@@ -24,7 +24,7 @@ const props = defineProps({
   },
 });
 function simpleClone(data: any) {
-  let copy: ComponentMap | null = {} || null;
+  let copy: COMPONENTMAP | null = {} || null;
   if (Array.isArray(data)) {
     copy = [];
   } else {
@@ -49,9 +49,9 @@ const listData = reactive(simpleClone(props.data));
 const $clMobileNav = ref<HTMLElement | null>(null),
   count = ref(props.data.length);
  const emit = defineEmits(['navItemClick']);
-function navClickHandle(e: MouseEvent, item: NavItem, index: number | string) {
+function navClickHandle(e: MouseEvent, item: NAVITEM, index: number | string) {
   if (typeof index === "string") index = parseInt(index);
-  listData.forEach((sub: NavItem) => {
+  listData.forEach((sub: NAVITEM) => {
     sub.isCurrent = false;
   });
   item.isCurrent = true;
@@ -68,7 +68,7 @@ function navClickHandle(e: MouseEvent, item: NavItem, index: number | string) {
  */
 function resizeNav() {
   let tIndex = 0;
-  listData.forEach((item: NavItem, index: number) => {
+  listData.forEach((item: NAVITEM, index: number) => {
     if (item.isCurrent) {
       tIndex = index;
     }
@@ -82,7 +82,7 @@ function resizeNav() {
 }
 onMounted(() => {
   let tIndex = 0;
-  listData.forEach((item: NavItem, index: number) => {
+  listData.forEach((item: NAVITEM, index: number) => {
     if (item.isCurrent) {
       tIndex = index;
     }
@@ -119,7 +119,8 @@ onBeforeUnmount(() => {
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
   name: "mobileNav",
-};
+});
 </script>

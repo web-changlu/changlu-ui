@@ -1,22 +1,49 @@
 /// <reference types="vite/client" />
 declare type injectDom = Element | Object;
-declare type MenuItem  = {
+declare type MENUITEM  = {
   id: string,
   value: number,
   label: string
 }
 
-declare type NavItem = {
+declare type WORDITEM = {
+  text: string,
+  textColor: string,
+  // 方阵
+  coordX?: number,
+  coordY?: number,
+  coordZ?: number,
+  // 螺旋
+  degY?: number,
+  depY?: number,
+  //球形
+  sphereDegX?:number,
+  sphereDegY?:number,
+  // 三体
+  threeDegX?:number,
+  threeDegY?:number,
+  // 几何
+  geoDegX?:number,
+  geoDegY?:number,
+  // 曲线
+  curveDegX?: number,
+  curveDegY?: number,
+  //随机
+  randomCoordX?:number,
+  randomCoordY?:number,
+  randomCoordZ?:number
+}
+declare type NAVITEM = {
   id: string,
   icon: string,
   text: string,
   href: string,
   isCurrent: boolean
 }
-declare type ComponentMap = {
+declare type COMPONENTMAP = {
   [key: string]: any
 }
-declare type ClockInfo = {
+declare type CLOCKINFO = {
   year: number,
   month: number,
   day: number,
@@ -25,16 +52,16 @@ declare type ClockInfo = {
   sec: number
 }
 
-declare type ClockHourObj = {
+declare type CLOCKHOUROBJ = {
   id: string,
   index: number,
   value: string
 }
 
-declare type CustomComp = {
+declare type CUSTOMCOMP = {
   install: Function 
 }
-declare type WVue =  {
+declare type WVUE =  {
   Vue: any
 }
 declare module '*.vue' {
@@ -52,7 +79,7 @@ declare module '*.vue' {
  * @key fillColor 粒子颜色
  * @key orbit 轨道半径
  */
-declare type Particle = {
+declare type PARTICLE = {
   size: number,
   position: {
     x: number, 

@@ -18,7 +18,7 @@
     </div>
 </template>
 <script setup lang="ts">
-    const navList: NavItem[] = [
+    const navList: NAVITEM[] = [
   {
     id: 'nav01',
     icon: 'icon-home',
@@ -55,7 +55,7 @@
     isCurrent: false
   },
 ]
-    const clickHandle = (item: NavItem)=> {
+    const clickHandle = (item: NAVITEM)=> {
       console.log(item, '选中的菜单')
     }
 </script>
@@ -80,11 +80,11 @@
 |    参数    |                        说明                         |  类型  | 是否必要 |   默认值   |
 | :--------: | :-------------------------------------------------: | :----: | :------: | :--------: |
 |    type    |                   导航栏菜单的类型                    |  string  |  false   | 'mobile' |
-| navData | 导航栏菜单数据 | NavItem[ ] |  true   |     [{id: "nav1",icon: "",text: "默认导航栏",href: "#",isCurrent: false,}]    |
+| navData | 导航栏菜单数据 | NAVITEM[ ] |  true   |     [{id: "nav1",icon: "",text: "默认导航栏",href: "#",isCurrent: false,}]    |
 
-::: tip 类型说明: NavItem
+::: tip 类型说明: NAVITEM
 ```typescript
-declare type NavItem = {
+declare type NAVITEM = {
   //菜单项的id
   id: string,
   // 菜单项的图标 目前仅引用部分阿里图标库 后续会加入其他常用图标库
