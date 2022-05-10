@@ -211,15 +211,16 @@ function initRotate() {
   //   console.log(rotateInfo,'旋转参数', 'dom', hourEl, minuteEl, secEl)
   return new Promise<void>((resolve) => {
     setTimeout(() => {
-      (hourEl[0] as HTMLElement).style.transform = `rotate(${rotateInfo.h}deg)`;
-
-      (
+      if(hourEl[0] && minuteEl[0] && secEl[0]){
+        (hourEl[0] as HTMLElement).style.transform = `rotate(${rotateInfo.h}deg)`;
+        (
         minuteEl[0] as HTMLElement
       ).style.transform = `rotate(${rotateInfo.m}deg)`;
-
       (secEl[0] as HTMLElement).style.transform = `rotate(${rotateInfo.s}deg)`;
 
       (hrEl[0] as HTMLElement).classList.add("active");
+      }
+  
       resolve();
     }, 1300);
   });
@@ -233,7 +234,10 @@ function start() {
         dateInfo.sec++;
         const secEl = document.querySelectorAll(".on-sec");
         const r = (360 / 60) * (dateInfo.sec - 1);
-        (secEl[0] as HTMLElement).style.transform = `rotate(${r}deg)`;
+        if(secEl[0]){
+          (secEl[0] as HTMLElement).style.transform = `rotate(${r}deg)`;
+        }
+        
         minuteAdd();
         start();
         resolve();
@@ -249,18 +253,26 @@ function minuteAdd() {
   if (dateInfo.sec == 60 + 1) {
     setTimeout(() => {
       const secEl = document.querySelectorAll(".on-sec");
-      (secEl[0] as HTMLElement).style.transitionDuration = `0s`;
-      (secEl[0] as HTMLElement).style.transform = `rotate(0deg)`;
+      if(secEl[0]){
+          (secEl[0] as HTMLElement).style.transitionDuration = `0s`;
+        (secEl[0] as HTMLElement).style.transform = `rotate(0deg)`;
+      }
+      
 
       dateInfo.sec = 1;
       setTimeout(() => {
+        if(secEl[0]){
         (secEl[0] as HTMLElement).style.transform = `rotate(0deg)`;
         (secEl[0] as HTMLElement).style.transitionDuration = `.3s`;
+        }
       }, 100);
       dateInfo.minute++;
       let r = (360 / 60) * (dateInfo.minute - 1);
       const minuteEl = document.querySelectorAll(".on-minute");
-      (minuteEl[0] as HTMLElement).style.transform = `rotate(${r}deg)`;
+      if(minuteEl[0]){
+(minuteEl[0] as HTMLElement).style.transform = `rotate(${r}deg)`;
+      }
+      
       hourAdd();
     }, 300);
   }
@@ -271,17 +283,20 @@ function hourAdd() {
   if (dateInfo.minute == 60 + 1) {
     setTimeout(() => {
       const minuteEl = document.querySelectorAll(".on-minute");
+      if(minuteEl[0]) {
       (minuteEl[0] as HTMLElement).style.transform = `rotate(0deg)`;
-      (minuteEl[0] as HTMLElement).style.transitionDuration = `0s`;
+      (minuteEl[0] as HTMLElement).style.transitionDuration = `0s`;}
       dateInfo.minute = 1;
       setTimeout(() => {
+        if(minuteEl[0]){
         (minuteEl[0] as HTMLElement).style.transform = `rotate(0deg)`;
-        (minuteEl[0] as HTMLElement).style.transitionDuration = `.3s`;
+        (minuteEl[0] as HTMLElement).style.transitionDuration = `.3s`;}
       }, 100);
       dateInfo.hour++;
       let r = (360 / 24) * (dateInfo.hour - 1);
       const hourEl = document.querySelectorAll(".on-hour");
-      (hourEl[0] as HTMLElement).style.transform = `rotate(${r}deg)`;
+      if(hourEl[0]){
+      (hourEl[0] as HTMLElement).style.transform = `rotate(${r}deg)`;}
       dayAdd();
     }, 300);
   }
@@ -292,12 +307,16 @@ function dayAdd() {
   if (dateInfo.hour == 24 + 1) {
     setTimeout(() => {
       const hourEl = document.querySelectorAll(".on-hour");
+      if(hourEl[0]){
       (hourEl[0] as HTMLElement).style.transform = `rotate(0deg)`;
       (hourEl[0] as HTMLElement).style.transitionDuration = `0s`;
+      }
       dateInfo.hour = 1;
       setTimeout(() => {
+        if(hourEl[0]){
         (hourEl[0] as HTMLElement).style.transform = `rotate(0deg)`;
         (hourEl[0] as HTMLElement).style.transitionDuration = `.3s`;
+        }
       }, 100);
 
       let nowDate = new Date();

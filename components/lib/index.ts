@@ -3,14 +3,22 @@ import type { App } from 'vue'
 /* 基础组件 start */
 import  ClButton  from './Button'
 import ClNotice from './Notification'
-import ClSelector  from './Selector'
 
 
+
+
+
+/* 基础组件 end   */
+
+/* 导航组件 start */
 import ClNavigationBar from './NavigationBar'
+/* 导航组件 end   */
 
-/* 基础组件 end */
+/* 表单组件 start */
+import ClSelector  from './Selector'
+/* 表单组件end   */
 
-/* 创意组件 start  */
+/* 创意组件 start */
 import ClClock from './Clock'
 import ClNebula from './Nebula'
 import ClWordCloud from './WordCloud'

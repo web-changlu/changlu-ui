@@ -5,16 +5,17 @@ import DemoBlock from 'vitepress-theme-demoblock/components/DemoBlock.vue'
 // import ClSelector from '../../../components/lib/Selector'
 // import  ClClock  from '../../../components/lib/Clock'
 // import  ClNavigationBar  from '../../../components/lib/NavigationBar'
-import { ClButton,ClSelector,ClClock, ClNavigationBar } from '../../../components/lib/index'
+import { ClButton,ClSelector,ClClock, ClNavigationBar, ClWordCloud } from '../../../components/lib/index'
 const componentsList = [
   Demo,
   DemoBlock,
   ClButton,
   ClSelector,
   ClClock,
-  ClNavigationBar
+  ClNavigationBar,
+  ClWordCloud
 ]
-
+console.log(componentsList, 'componentsList')
 export function registerComponents(app: App) {
   // app.component('Demo', Demo)
   // app.component('DemoBlock', DemoBlock)

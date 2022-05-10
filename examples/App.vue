@@ -76,7 +76,7 @@ const wordList = <string[]>['Grid','Helix','Chaotic','Sphere','Three','Geome','C
     <!-- <cl-clock :clock-width="compkWidth"></cl-clock> -->
     <!-- <cl-nebula ></cl-nebula> -->
     <!-- <cl-navigationBar type="mobile" :navData="navList"></cl-navigationBar> -->
-    <cl-wordCloud :width="500" :wordData="wordList"></cl-wordCloud>
+    <cl-wordCloud :width="800" :height="800" :wordData="wordList" :backgroundColor="'ssd545454'"></cl-wordCloud>
   </div>
 
   <!-- <cl-selector placeholder="请选择选项" :data-option="selectorData" @change="setItem"></cl-selector> -->
@@ -89,7 +89,8 @@ const wordList = <string[]>['Grid','Helix','Chaotic','Sphere','Three','Geome','C
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   display: flex;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 2800px;
   width: 100vw;
   align-items: center;
   justify-content: center;
