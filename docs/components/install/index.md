@@ -10,8 +10,6 @@ npm install changlu-ui -S
 
 ### 2.通过cdn方式引入
 
->此法暂未测试，不确定是否可用...
-
 ```html
 <!-- 引入样式 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/changlu-ui@1.0.18/dist/theme-default/index.css">

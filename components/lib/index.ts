@@ -65,21 +65,12 @@ export {
     ClClock,
     ClNebula,
     ClNavigationBar,
-    ClWordCloud
+    ClWordCloud,
+    install
 }
 
 // 全部导出
 export default  {
     version: '1.0.0',
-    install,
-    ...componentsList
+    install
 }
-
-
-//单独暴露组件 方便按需引入,
-// export const ClButton = Button;
-// export const ClNotice = Notice;
-// export const ClSelector = Selector;
-// export const ClClock = Clock;
-// export const ClNebula = Nebula;
-// export const ClNavigationBar = NavigationBar;
