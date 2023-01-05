@@ -34,12 +34,21 @@
     //全部引入
     import 'changlu-ui/theme-default/index.css'
     import CLUI from 'changlu-ui';
-    Vue.use(CLUI);
 
     // 按需引入
-    import 'changlu-ui/theme-default/demo.css';
-    import { Demo } from 'changlu-ui';
-    Vue.use(Demo);
+    import 'changlu-ui/theme-default/ClButton.css'
+    import { ClButton } from 'changlu-ui'
+
+    createApp({
+    data() {
+        return {
+        message: 'Hello CLUI!',
+        }
+    },
+    })
+    .use(CLUI)
+    //   .use(ClButton)
+    .mount('#app')
 
 ```
 
