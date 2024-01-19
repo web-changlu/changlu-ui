@@ -11,6 +11,7 @@ import 'vitepress-theme-demoblock/theme/styles/index.css'
 import { registerComponents } from './register-components.js'
 
 export default {
+  base: '/changlu-ui/',
   ...Theme,
   enhanceApp(vitepress:any) {
     // app.component('clButton', clButton) 

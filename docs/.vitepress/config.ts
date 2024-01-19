@@ -98,13 +98,13 @@ const getDemoSidebar = () => {
   ]
 }
 export default defineConfig({
-  base: '/',
+  base: '/changlu-ui/',
   title: 'ChangLu-UI',
   description: '一款v3组件库',
   head: [[
     'link', {
       rel: 'icon',
-      href: '/img/favicon.ico'
+      href: '/changlu-ui/img/favicon.ico'
     }
   ]],
   themeConfig: {
