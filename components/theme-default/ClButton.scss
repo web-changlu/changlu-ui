@@ -10,6 +10,8 @@
     span{
         margin-left: 5px;
     }
+    user-select: none;
+    
     /* 默认按钮 */
     &--default{
         background: transparent;
@@ -46,8 +48,56 @@
             height: calc(100% + 9px);
         }
     }
-    /* 流光按钮 */
+    // 按钮  流光
     &--streamer{
+        padding: 10px 30px;
+        color: #fff;
+        // .cl-button__text{
+        //     color: transparent; /* 隐藏原文字 */
+        // }
+        border: none;
+        border-radius: 999rem;
+        background: linear-gradient(
+                90deg,#03a9f4, #f441a5, #ffeb3b,
+                #03a9f4, #f441a5, #ffeb3b, #03a9f4); /*渐变背景*/
+        background-size: 400%; /*背景大小*/
+        transition: 0.5s ease-in-out;
+        white-space: nowrap; /* 防止换行 */
+        z-index: 1; /*显示在伪类背景上方*/
+        &:hover{
+            animation: horizonDrift 8s linear infinite alternate; /*动画: 名称 时间 线性 循环 播放完回退播放*/
+            &::before{
+                filter: blur(20px);
+                opacity: 1;
+                animation: horizonDrift 8s linear infinite;
+            }
+        }
+        &::before{
+            content: '';
+            position: absolute; /*绝对定位*/
+            top:-1px; /*当设置对立的2个定位属性时，元素的大小将由对立的大小决定*/
+            left: -1px;
+            right: -1px;
+            bottom: -1px; /*当设置对立的2个定位属性时，元素的大小将由对立的大小决定*/
+            z-index: -1;
+            background: linear-gradient(
+                    90deg,#03a9f4, #f441a5, #ffeb3b, #03a9f4,
+                    #f441a5, #ffeb3b, #03a9f4);
+            border-radius: 999rem;
+            background-size: 400%;
+            filter: blur(20px); /*过渡：模糊*/
+            opacity: 0; /*透明度*/
+            transition: 1s; /*过渡时间*/
+        }
+        &:hover::before{
+            filter: blur(10px);
+                opacity: 1;
+                animation: horizonDrift 8s linear infinite;
+        }
+    }
+
+    /* 幻界双流 按钮 */
+    &--dualFlow{
         border-radius: 3px;
         z-index: 0;
         border: none;
@@ -126,6 +176,19 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes horizonDrift{
+    0%{
+        background-position: 0%; /*修改背景定位，实现渐变色炫光*/
+    }
+    50%{
+        background-position: 100%;
+    }
+    100%{
+        background-position: 0%;
+    }
+}
+
 .is-disabled{
     cursor: not-allowed;
 }

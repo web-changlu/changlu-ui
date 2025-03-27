@@ -76,31 +76,34 @@ const wordList = <string[]>['Grid','Helix','Chaotic','Sphere','Three','Geome','C
     <!-- <cl-clock :clock-width="compkWidth"></cl-clock> -->
     <!-- <cl-nebula ></cl-nebula> -->
     <!-- <cl-navigationBar type="mobile" :navData="navList"></cl-navigationBar> -->
-    <cl-wordCloud :width="800" :height="800" :wordData="wordList" :backgroundColor="'ssd545454'"></cl-wordCloud>
+    <!-- <cl-wordCloud :width="800" :height="800" :wordData="wordList" :backgroundColor="'ssd545454'"></cl-wordCloud> -->
   </div>
 
   <!-- <cl-selector placeholder="请选择选项" :data-option="selectorData" @change="setItem"></cl-selector> -->
-  <!-- <cl-button @click="buttonClick" :loading="true">默认按钮</cl-button>
+  <cl-button @click="buttonClick" :loading="true">默认按钮</cl-button>
   --------------------------------------------------------
-  <cl-button @click="buttonClick" type="streamer" :disabled="true" :loading="true">流光按钮</cl-button> -->
+  <!-- <cl-button @click="buttonClick" type="dualFlow" :disabled="true" :loading="true">按钮（幻界双流）</cl-button> -->
+  --------------------------------------------------------
+  <cl-button @click="buttonClick" type="streamer" :disabled="true" :loading="true">按钮（流光）</cl-button>
+  
 </template>
 
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   display: flex;
-  /* height: 100vh; */
-  height: 2800px;
+  height: 100vh;
+  /* height: 2800px; */
   width: 100vw;
   align-items: center;
   justify-content: center;
 }
-.body-container{
+/* .body-container{
   position: relative;
   height: 100%;
   width: 100%;
   background-color: cadetblue;
-}
+} */
 .container{
   position: absolute;
   width: 100%;
