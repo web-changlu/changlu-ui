@@ -1,6 +1,6 @@
 {
   "name": "changlu-ui",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "files": [
     "dist",
     "components",
@@ -32,7 +32,7 @@
   },
   "license": "MIT",
   "repository": "https://github.com/web-changlu/changlu-ui.git",
-  "homepage": "http://ui.changlu.xyz/",
+  "homepage": "https://web-changlu.github.io/changlu-ui/",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build && gulp clean copyfonts font sass ",

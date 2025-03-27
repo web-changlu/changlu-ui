@@ -8,9 +8,8 @@
 
 ```vue
 <template>
-  
   <cl-button >默认按钮 </cl-button> 
-  <cl-button type='default' >默认按钮 </cl-button> 
+  <cl-button type='dualFlow'>按钮（幻界双流）</cl-button>
   <cl-button type='streamer'>流光按钮</cl-button>
   <cl-button  >其他按钮</cl-button>
 </template>
@@ -26,6 +25,7 @@
 ```vue
 <template>
   <cl-button disabled>默认按钮 </cl-button> 
+  <cl-button type='dualFlow' disabled>按钮 （幻界双流）</cl-button>
   <cl-button type='streamer' disabled>流光按钮</cl-button>
   <cl-button  disabled>其他按钮</cl-button>
 </template>
@@ -42,7 +42,8 @@
 ```vue
 <template>
   <cl-button icon='iconfont icon-iconsearch-copy'></cl-button> 
-  <cl-button type='streamer'  icon='iconfont icon-setting'>设置</cl-button>
+  <cl-button type='dualFlow'  icon='iconfont icon-setting'>设置</cl-button>
+  <cl-button type='streamer'  icon='iconfont icon-Camera'>CAMERA</cl-button>
   <cl-button  icon='iconfont icon-fenxiang'></cl-button>
 </template>
 ```
@@ -58,8 +59,10 @@
 ```vue
 <template>
   <cl-button loading>加载中</cl-button> 
-  <cl-button type='streamer' :loading='true' >操作中</cl-button>
+  <cl-button type='dualFlow' :loading='true' >操作中</cl-button>
+  <cl-button type='streamer' :loading='true' icon='iconfont icon-iconsearch-copy'>搜索中</cl-button>
   <cl-button  :loading='false'>加载完成</cl-button>
+  <cl-button  type='streamer' :loading='false' icon='iconfont icon-iconsearch-copy'>搜索完成</cl-button>
 </template>
 ```
 
